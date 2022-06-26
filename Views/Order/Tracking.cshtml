@@ -1,0 +1,85 @@
+﻿@model IEnumerable<OnlineShippingApp.Models.Order>
+@{
+    ViewBag.Title = "Tracking";
+}
+
+<h2>Tracking</h2>
+
+
+
+@using (Html.BeginForm("Index", "Order", FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table table-striped table-hover bg-light">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeicialCode)
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.clientName)*@
+            @Html.ActionLink("Client Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackingBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </th>
+      
+    </tr>
+
+    @*@foreach (var item in )
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpeicialCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.clientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destination)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrackingBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderStatus)
+            </td>
+            
+        </tr>
+    }*@
+
+</table>
+
+
+
+

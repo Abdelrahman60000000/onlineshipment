@@ -1,0 +1,82 @@
+﻿@model OnlineShippingApp.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeicialCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpeicialCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackingBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackingBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderId }, new { @class = "btn btn-primary " }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary " })
+</p>

@@ -1,0 +1,88 @@
+﻿@model OnlineShippingApp.Models.Order
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SpeicialCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpeicialCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrackingBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrackingBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderStatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary " })
+        </div>
+    }
+</div>
